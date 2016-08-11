@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //[Localytics setLoggingEnabled:YES];
-    [Localytics autoIntegrate:@"YOUR-APP-KEY" launchOptions:launchOptions];
+    [Localytics autoIntegrate:@"YOUR-LOCALYTICS-APP-KEY" launchOptions:launchOptions];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
         UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);

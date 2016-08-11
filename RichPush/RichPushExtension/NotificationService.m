@@ -22,7 +22,7 @@
     self.bestAttemptContent = [request.content mutableCopy];
     
     // Modify the notification content here...
-    NSString *imageURL = self.bestAttemptContent.userInfo[@"attachment-image"];
+    NSString *imageURL = self.bestAttemptContent.userInfo[@"image_url"];
     if (imageURL) {
         NSURL *url = [NSURL URLWithString:imageURL];
         NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
