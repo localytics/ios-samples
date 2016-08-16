@@ -1,12 +1,10 @@
 PODS:
-  - Localytics (4.0.0)
+  - Localytics (4.0.1)
 
 DEPENDENCIES:
   - Localytics (~> 4.0)
 
 SPEC CHECKSUMS:
-  Localytics: 205a563a2761b5d844e8bba522d3c1da6cf4bc5b
+  Localytics: b83296ce3674965cb122e1e05d427b2f622f62f6
 
-PODFILE CHECKSUM: d4f6e6e667c0234e754920ba7b85b25f8568f47e
-
-COCOAPODS: 1.0.1
+COCOAPODS: 0.39.0

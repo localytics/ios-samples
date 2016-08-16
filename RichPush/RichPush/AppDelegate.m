@@ -10,30 +10,20 @@
 #import <UIKit/UIKit.h>
 @import Localytics;
 
-@interface AppDelegate ()
-
-@end
-
 @implementation AppDelegate
+
+NSString *const LIKE_CATEGORY_IDENTIFIER = @"like";
+NSString *const SHARE_CATEGORY_IDENTIFIER = @"share";
+NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //[Localytics setLoggingEnabled:YES];
     [Localytics autoIntegrate:@"YOUR-LOCALYTICS-APP-KEY" launchOptions:launchOptions];
-    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)])
-    {
-        UIUserNotificationType types = (UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
-        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
-        [application registerUserNotificationSettings:settings];
-        [application registerForRemoteNotifications];
-    }
-    else
-    {
-        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
-    }
-    [Localytics tagEvent:@"Initialized"];
-    [Localytics upload];
+    [self setNotificationSettingsAndRegisterRemoteNotifications];
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    
     return YES;
 }
 
@@ -75,5 +65,44 @@
     NSLog(@"%@", [[token copy] lowercaseString]);
 }
 
+
+-(void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    if (completionHandler) {
+        completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
+    }
+}
+
+-(void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    if ([LIKE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
+        //handle behavior for like button
+    } else if ([SHARE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
+        //handle behavior for share button
+    } else if ([BUY_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
+        //handle behavior for buy button
+    } else if ([UNNotificationDefaultActionIdentifier isEqualToString:response.actionIdentifier]) {
+        //handle open behavior
+    } else if([UNNotificationDismissActionIdentifier isEqualToString:response.actionIdentifier]) {
+        //handle dismiss behavior
+    }
+    if (completionHandler) {
+        completionHandler();
+    }
+}
+
+-(void) setNotificationSettingsAndRegisterRemoteNotifications {
+    UNNotificationAction *like = [UNNotificationAction actionWithIdentifier:LIKE_CATEGORY_IDENTIFIER title:@"Like" options:UNNotificationActionOptionForeground];
+    UNNotificationAction *share = [UNNotificationAction actionWithIdentifier:SHARE_CATEGORY_IDENTIFIER title:@"Share" options:UNNotificationActionOptionForeground];
+    UNNotificationCategory *social = [UNNotificationCategory categoryWithIdentifier:@"social" actions:@[like, share] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
+    
+    UNNotificationAction *buy = [UNNotificationAction actionWithIdentifier:BUY_CATEGORY_IDENTIFIER title:@"Buy" options:UNNotificationActionOptionNone];
+    UNNotificationCategory *product = [UNNotificationCategory categoryWithIdentifier:@"product" actions:@[buy] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
+    
+    NSSet *categories = [NSSet setWithArray:@[social, product]];
+    
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    }];
+    [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:categories];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
 
 @end
