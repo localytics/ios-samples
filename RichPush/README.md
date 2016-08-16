@@ -11,3 +11,7 @@ handling of particular rich push messages (e.g. images).
 ## Images
 
 Send a push including an `image_url` key with an HTTP image URL value.
+
+## Actions
+
+Send a push including an `action_category` key with the value `social` or `product`.
