@@ -10,7 +10,7 @@ handling of particular rich push messages (e.g. images).
 
 ## Images
 
-Send a push including an `image_url` key with an HTTP image URL value.
+Send a push including the `mutable-content` key with a value of `1` and an `image_url` key with an HTTP image URL value.
 
 ## Actions
 
