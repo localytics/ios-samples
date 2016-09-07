@@ -12,15 +12,15 @@
 
 @implementation AppDelegate
 
-NSString *const LIKE_CATEGORY_IDENTIFIER = @"like";
-NSString *const SHARE_CATEGORY_IDENTIFIER = @"share";
-NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
+static NSString *const LIKE_CATEGORY_IDENTIFIER = @"like";
+static NSString *const SHARE_CATEGORY_IDENTIFIER = @"share";
+static NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //[Localytics setLoggingEnabled:YES];
-    [Localytics autoIntegrate:@"YOUR-LOCALYTICS-APP-KEY" launchOptions:launchOptions];
+    [Localytics setLoggingEnabled:YES];
+    [Localytics autoIntegrate:@"LOCALYTICS_APP_KEY" launchOptions:launchOptions];
     [self setNotificationSettingsAndRegisterRemoteNotifications];
     [UNUserNotificationCenter currentNotificationCenter].delegate = self;
     
@@ -54,7 +54,7 @@ NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     const char *data = [deviceToken bytes];
     NSMutableString *token = [NSMutableString string];
     
@@ -65,7 +65,6 @@ NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
     NSLog(@"%@", [[token copy] lowercaseString]);
 }
 
-
 -(void) userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
     if (completionHandler) {
         completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
@@ -73,6 +72,9 @@ NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
 }
 
 -(void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    
+    [Localytics didReceiveNotificationResponseWithUserInfo:response.notification.request.content.userInfo];
+    
     if ([LIKE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
         //handle behavior for like button
     } else if ([SHARE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
@@ -98,11 +100,12 @@ NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
     UNNotificationCategory *product = [UNNotificationCategory categoryWithIdentifier:@"product" actions:@[buy] intentIdentifiers:@[] options:UNNotificationCategoryOptionNone];
     
     NSSet *categories = [NSSet setWithArray:@[social, product]];
-    
-    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    NSInteger authorizationOptions = (UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge);
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:authorizationOptions completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        [Localytics didRequestUserNotificationAuthorizationWithOptions:authorizationOptions granted:granted];
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
     }];
     [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:categories];
-    [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 
 @end

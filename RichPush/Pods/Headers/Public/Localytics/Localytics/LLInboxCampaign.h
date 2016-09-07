@@ -1,1 +1,1 @@
-../../../../Localytics/Localytics-iOS-4.0.1/Localytics.framework/Headers/LLInboxCampaign.h
+../../../../Localytics/Localytics-iOS-4.1.0/Localytics.framework/Headers/LLInboxCampaign.h
