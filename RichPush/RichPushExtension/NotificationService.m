@@ -36,7 +36,7 @@ static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
     NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
         if (error) {
-            NSLog(@"Error fetching attachment, displaying content unaltered: %@", [error localizedDescription]);
+            NSLog(@"Failed to retrieve attachment with error: %@", [error localizedDescription]);
             self.contentHandler(self.bestAttemptContent);
             return;
         }
