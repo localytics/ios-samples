@@ -8,8 +8,8 @@
 
 #import "NotificationService.h"
 
-static NSString *const ATTACHMENT_IMAGE_KEY = @"image_url";
-static NSString *const ATTACHMENT_TYPE_KEY = @"image_type";
+static NSString *const ATTACHMENT_IMAGE_KEY = @"ll_attachment_url";
+static NSString *const ATTACHMENT_TYPE_KEY = @"ll_attachment_type";
 static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
 
 @interface NotificationService ()
