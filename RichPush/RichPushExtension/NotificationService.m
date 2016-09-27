@@ -10,7 +10,7 @@
 
 static NSString *const ATTACHMENT_IMAGE_KEY = @"ll_attachment_url";
 static NSString *const ATTACHMENT_TYPE_KEY = @"ll_attachment_type";
-static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
+static NSString *const ATTACHMENT_FILE_NAME = @"-attachment-image.";
 
 @interface NotificationService ()
 
@@ -25,7 +25,6 @@ static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
-    // Modify the notification content here...
     NSString *imageURL = self.bestAttemptContent.userInfo[ATTACHMENT_IMAGE_KEY];
     NSString *imageType = self.bestAttemptContent.userInfo[ATTACHMENT_TYPE_KEY];
     if (!imageURL || !imageType) {
@@ -33,29 +32,32 @@ static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
         return;
     }
     NSURL *url = [NSURL URLWithString:imageURL];
-    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
+    [[[NSURLSession sharedSession] downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable tempFile, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Failed to retrieve attachment with error: %@", [error localizedDescription]);
             self.contentHandler(self.bestAttemptContent);
             return;
         }
-        
+        if (!tempFile) {
+            NSLog(@"No temporary file exists with downloaded content");
+            self.contentHandler(self.bestAttemptContent);
+            return;
+        }
         NSArray *cache = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
         NSString *cachesFolder = cache[0];
-        
+            
         NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString];
         NSString *fileName = [[guid stringByAppendingString:ATTACHMENT_FILE_NAME] stringByAppendingString:imageType];
         NSString *cacheFile = [cachesFolder stringByAppendingPathComponent:fileName];
-        
+        NSURL *attachmentURL = [NSURL fileURLWithPath:cacheFile isDirectory:NO];
         NSError *err = nil;
-        if (![data writeToFile:cacheFile options:NSDataWritingAtomic error:&err]) {
+        [[NSFileManager defaultManager] moveItemAtURL:tempFile toURL:attachmentURL error:&err];
+        if (err) {
             NSLog(@"Failed to save attachment on disk with error: %@", [err localizedDescription]);
             self.contentHandler(self.bestAttemptContent);
             return;
         }
         
-        NSURL *attachmentURL = [NSURL fileURLWithPath:cacheFile isDirectory:NO];
         UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:@"" URL:attachmentURL options:nil error:&err];
         if (attachment) {
             self.bestAttemptContent.attachments = @[attachment];
@@ -63,13 +65,11 @@ static NSString *const ATTACHMENT_FILE_NAME = @"attachment-image.";
             NSLog(@"Failed to create attachment with error: %@", [err localizedDescription]);
         }
         self.contentHandler(self.bestAttemptContent);
-    }];
-    [task resume];
+        
+    }] resume];
 }
 
 - (void)serviceExtensionTimeWillExpire {
-    // Called just before the extension will be terminated by the system.
-    // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
     self.contentHandler(self.bestAttemptContent);
 }
 
