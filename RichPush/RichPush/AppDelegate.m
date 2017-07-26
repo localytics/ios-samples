@@ -73,8 +73,8 @@ static NSString *const BUY_CATEGORY_IDENTIFIER = @"buy";
 
 -(void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
     
-    [Localytics didReceiveNotificationResponseWithUserInfo:response.notification.request.content.userInfo];
-    
+    [Localytics didReceiveNotificationResponse:response.notification.request.content.userInfo andActionIdentifier: response.actionIdentifier];
+
     if ([LIKE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
         //handle behavior for like button
     } else if ([SHARE_CATEGORY_IDENTIFIER isEqualToString:response.actionIdentifier]) {
