@@ -1,1 +1,0 @@
-../../../../Localytics/Localytics-iOS-5.1.0/Localytics.framework/Headers/LocalyticsTypes.h
