@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A38E919207BC4F0003D3E7E /* AuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38E918207BC4F0003D3E7E /* AuthenticationService.m */; };
 		0A69D8BC2077CB3900EA3DD8 /* AuthenticationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */; };
 		0AAC1C33207416B100A40A0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C32207416B100A40A0C /* AppDelegate.m */; };
 		0AAC1C36207416B100A40A0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C35207416B100A40A0C /* ViewController.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A38E918207BC4F0003D3E7E /* AuthenticationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationService.m; sourceTree = "<group>"; };
+		0A38E91A207BC507003D3E7E /* AuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationService.h; sourceTree = "<group>"; };
 		0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationResult.m; sourceTree = "<group>"; };
 		0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationResult.h; sourceTree = "<group>"; };
 		0AAC1C2E207416B100A40A0C /* gdpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gdpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				0AAC1C40207416B100A40A0C /* main.m */,
 				0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */,
 				0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */,
+				0A38E91A207BC507003D3E7E /* AuthenticationService.h */,
+				0A38E918207BC4F0003D3E7E /* AuthenticationService.m */,
 			);
 			path = gdpr;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				0AAC1C36207416B100A40A0C /* ViewController.m in Sources */,
 				0AAC1C41207416B100A40A0C /* main.m in Sources */,
 				0AAC1C33207416B100A40A0C /* AppDelegate.m in Sources */,
+				0A38E919207BC4F0003D3E7E /* AuthenticationService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

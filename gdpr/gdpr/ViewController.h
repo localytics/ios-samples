@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AuthenticationResult.h"
+#import "AuthenticationService.h"
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *emailFld;
 @property (weak, nonatomic) IBOutlet UITextField *passwordFld;
-
-- (AuthenticationResult *)authenticateUserWithEmail:(NSString *)email andPassword:(NSString *)password;
 
 @end
 

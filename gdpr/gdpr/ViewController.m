@@ -28,29 +28,22 @@
     if (email != nil && password != nil) {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            sleep(2);
-            AuthenticationResult *result = [self authenticateUserWithEmail:email andPassword:password];
+            AuthenticationResult *result = [[AuthenticationService shared] authenticateUserWithEmail:email andPassword:password];
             if ([result success]) {
                 
                 BOOL optedOut = [result optedOut];
                 [Localytics setCustomerId:[result customerId] privacyOptedOut:optedOut];
+                
+                //you've set the opted out flag to the proper value, you can now safely turn on uploads
                 [Localytics pauseDataUploading:false];
+                
+                //ensure you're not sending Places notifications to users who have opted out of tracking
                 [Localytics setLocationMonitoringEnabled:!optedOut];
             } else {
                 //authentication failed
             }
         });
     }
-}
-
-//TODO: turn this into a service/task
-- (AuthenticationResult *)authenticateUserWithEmail:(NSString *)email andPassword:(NSString *)password {
-    
-    BOOL success = YES;
-    NSString *customerId = @"id123";
-    BOOL optedOut = YES;
-    AuthenticationResult *result = [AuthenticationResult resultWithSuccess:success andCustomerId:customerId andOptedOut:optedOut];
-    return result;
 }
 
 @end
