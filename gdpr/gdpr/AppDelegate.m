@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     [Localytics pauseDataUploading:YES];
-    [Localytics autoIntegrate:@"YOUR-LOCALYTICS-APP-KEY"
+    [Localytics autoIntegrate:@"a39f6f0cb378dbd8239767d-487f3e04-8691-11e6-ab4e-0098ae15fcaa"
         withLocalyticsOptions:@{
                                 LOCALYTICS_WIFI_UPLOAD_INTERVAL_SECONDS: @5,
                                 LOCALYTICS_GREAT_NETWORK_UPLOAD_INTERVAL_SECONDS: @10,

@@ -39,6 +39,10 @@
                 
                 //ensure you're not sending Places notifications to users who have opted out of tracking
                 [Localytics setLocationMonitoringEnabled:!optedOut];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"goToHome" sender:self];
+                });
             } else {
                 //authentication failed
             }

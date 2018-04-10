@@ -17,6 +17,7 @@
 		0AAC1C41207416B100A40A0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C40207416B100A40A0C /* main.m */; };
 		0AAC1C4B207416B100A40A0C /* gdprTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C4A207416B100A40A0C /* gdprTests.m */; };
 		0AAC1C56207416B100A40A0C /* gdprUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C55207416B100A40A0C /* gdprUITests.m */; };
+		0ADA2E2B207D2A010020836A /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2E2A207D2A010020836A /* HomeVC.m */; };
 		2125B96B214E4064AD7E9F0A /* libPods-gdprUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A784A5481761C72A679833D6 /* libPods-gdprUITests.a */; };
 		2E5FF42F970CB3A222DDBC4C /* libPods-gdprTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0236B223243F032E212F439 /* libPods-gdprTests.a */; };
 		46193AF2049A03968EF79B8D /* libPods-gdpr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7316954D07C76C408C7A31AA /* libPods-gdpr.a */; };
@@ -60,6 +61,8 @@
 		0AAC1C51207416B100A40A0C /* gdprUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gdprUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AAC1C55207416B100A40A0C /* gdprUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gdprUITests.m; sourceTree = "<group>"; };
 		0AAC1C57207416B100A40A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADA2E29207D2A010020836A /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		0ADA2E2A207D2A010020836A /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		121986E6431CE00B8DE79FFB /* Pods-gdpr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdpr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdpr/Pods-gdpr.debug.xcconfig"; sourceTree = "<group>"; };
 		2223927DBC668379C8F7F486 /* Pods-gdprTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdprTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdprTests/Pods-gdprTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29B72C7348AE8EC9D3D7C6F9 /* Pods-gdpr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdpr.release.xcconfig"; path = "Pods/Target Support Files/Pods-gdpr/Pods-gdpr.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,17 +129,15 @@
 			children = (
 				0AAC1C31207416B100A40A0C /* AppDelegate.h */,
 				0AAC1C32207416B100A40A0C /* AppDelegate.m */,
-				0AAC1C34207416B100A40A0C /* ViewController.h */,
-				0AAC1C35207416B100A40A0C /* ViewController.m */,
+				0A38E91A207BC507003D3E7E /* AuthenticationService.h */,
+				0A38E918207BC4F0003D3E7E /* AuthenticationService.m */,
+				0ADA2E28207D29B40020836A /* Model */,
+				0ADA2E27207D29A20020836A /* Controller */,
 				0AAC1C37207416B100A40A0C /* Main.storyboard */,
 				0AAC1C3A207416B100A40A0C /* Assets.xcassets */,
 				0AAC1C3C207416B100A40A0C /* LaunchScreen.storyboard */,
 				0AAC1C3F207416B100A40A0C /* Info.plist */,
 				0AAC1C40207416B100A40A0C /* main.m */,
-				0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */,
-				0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */,
-				0A38E91A207BC507003D3E7E /* AuthenticationService.h */,
-				0A38E918207BC4F0003D3E7E /* AuthenticationService.m */,
 			);
 			path = gdpr;
 			sourceTree = "<group>";
@@ -157,6 +158,26 @@
 				0AAC1C57207416B100A40A0C /* Info.plist */,
 			);
 			path = gdprUITests;
+			sourceTree = "<group>";
+		};
+		0ADA2E27207D29A20020836A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C34207416B100A40A0C /* ViewController.h */,
+				0AAC1C35207416B100A40A0C /* ViewController.m */,
+				0ADA2E29207D2A010020836A /* HomeVC.h */,
+				0ADA2E2A207D2A010020836A /* HomeVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0ADA2E28207D29B40020836A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */,
+				0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		151FA37C0D64318472AF8CD0 /* Frameworks */ = {
@@ -477,6 +498,7 @@
 				0A69D8BC2077CB3900EA3DD8 /* AuthenticationResult.m in Sources */,
 				0AAC1C36207416B100A40A0C /* ViewController.m in Sources */,
 				0AAC1C41207416B100A40A0C /* main.m in Sources */,
+				0ADA2E2B207D2A010020836A /* HomeVC.m in Sources */,
 				0AAC1C33207416B100A40A0C /* AppDelegate.m in Sources */,
 				0A38E919207BC4F0003D3E7E /* AuthenticationService.m in Sources */,
 			);
