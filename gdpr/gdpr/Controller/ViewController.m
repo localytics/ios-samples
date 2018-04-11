@@ -31,6 +31,8 @@
             AuthenticationResult *result = [[AuthenticationService shared] authenticateUserWithEmail:email andPassword:password];
             if ([result success]) {
                 
+                [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"isLoggedIn"];
+                
                 BOOL optedOut = [result optedOut];
                 [Localytics setCustomerId:[result customerId] privacyOptedOut:optedOut];
                 
@@ -41,7 +43,7 @@
                 [Localytics setLocationMonitoringEnabled:!optedOut];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [self performSegueWithIdentifier:@"goToHome" sender:self];
+                        self.view.window.rootViewController = [self.view. window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
                 });
             } else {
                 //authentication failed

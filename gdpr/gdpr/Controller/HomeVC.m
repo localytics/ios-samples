@@ -33,7 +33,8 @@
 
 - (IBAction)signOutTapped:(id)sender {
     [Localytics setCustomerId:nil privacyOptedOut:NO];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLoggedIn"];
+    self.view.window.rootViewController = [self.view. window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
 }
 
 

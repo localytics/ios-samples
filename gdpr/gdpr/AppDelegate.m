@@ -29,6 +29,14 @@
                                 }
                 launchOptions:launchOptions];
     
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIn"]) {
+        //TODO check user's opt-out status on your server
+        BOOL optOutStatus = NO;
+        [Localytics setPrivacyOptedOut:optOutStatus];
+        //go to home screen
+        self.window.rootViewController = [self.window.rootViewController.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];
+    }
+    
     return YES;
 }
 

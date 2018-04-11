@@ -23,8 +23,7 @@
 
 - (AuthenticationResult *)authenticateUserWithEmail:(NSString *)email andPassword:(NSString *)password {
     
-    sleep(3); //mocking a server call
-    
+    sleep(3); //mocking a server call, which should return the following values:
     BOOL success = YES;
     NSString *customerId = @"id123";
     BOOL optedOut = YES;
