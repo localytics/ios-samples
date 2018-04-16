@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A38E919207BC4F0003D3E7E /* AuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A38E918207BC4F0003D3E7E /* AuthenticationService.m */; };
+		0A69D8BC2077CB3900EA3DD8 /* AuthenticationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */; };
+		0AAC1C33207416B100A40A0C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C32207416B100A40A0C /* AppDelegate.m */; };
+		0AAC1C36207416B100A40A0C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C35207416B100A40A0C /* ViewController.m */; };
+		0AAC1C39207416B100A40A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC1C37207416B100A40A0C /* Main.storyboard */; };
+		0AAC1C3B207416B100A40A0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC1C3A207416B100A40A0C /* Assets.xcassets */; };
+		0AAC1C3E207416B100A40A0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC1C3C207416B100A40A0C /* LaunchScreen.storyboard */; };
+		0AAC1C41207416B100A40A0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C40207416B100A40A0C /* main.m */; };
+		0AAC1C4B207416B100A40A0C /* gdprTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C4A207416B100A40A0C /* gdprTests.m */; };
+		0AAC1C56207416B100A40A0C /* gdprUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AAC1C55207416B100A40A0C /* gdprUITests.m */; };
+		0ADA2E2B207D2A010020836A /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADA2E2A207D2A010020836A /* HomeVC.m */; };
+		3F8F4DE3F905E67E83A77EBF /* Pods_gdpr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDAD4C9D1A75E8E2B4352A75 /* Pods_gdpr.framework */; };
+		56A402BF7761C4421FF4A550 /* Pods_gdprUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0DF46AD3B2C0406D4DA7A8 /* Pods_gdprUITests.framework */; };
+		94C6E3BA29F7B77E0ED220C7 /* Pods_gdprTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 054901B397136DCD428299F4 /* Pods_gdprTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AAC1C47207416B100A40A0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAC1C26207416B100A40A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAC1C2D207416B100A40A0C;
+			remoteInfo = gdpr;
+		};
+		0AAC1C52207416B100A40A0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AAC1C26207416B100A40A0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AAC1C2D207416B100A40A0C;
+			remoteInfo = gdpr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		054901B397136DCD428299F4 /* Pods_gdprTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gdprTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A38E918207BC4F0003D3E7E /* AuthenticationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationService.m; sourceTree = "<group>"; };
+		0A38E91A207BC507003D3E7E /* AuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationService.h; sourceTree = "<group>"; };
+		0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationResult.m; sourceTree = "<group>"; };
+		0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationResult.h; sourceTree = "<group>"; };
+		0AAC1C2E207416B100A40A0C /* gdpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gdpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAC1C31207416B100A40A0C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AAC1C32207416B100A40A0C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AAC1C34207416B100A40A0C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0AAC1C35207416B100A40A0C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0AAC1C38207416B100A40A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AAC1C3A207416B100A40A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AAC1C3D207416B100A40A0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AAC1C3F207416B100A40A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAC1C40207416B100A40A0C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AAC1C46207416B100A40A0C /* gdprTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gdprTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAC1C4A207416B100A40A0C /* gdprTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gdprTests.m; sourceTree = "<group>"; };
+		0AAC1C4C207416B100A40A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AAC1C51207416B100A40A0C /* gdprUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gdprUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AAC1C55207416B100A40A0C /* gdprUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gdprUITests.m; sourceTree = "<group>"; };
+		0AAC1C57207416B100A40A0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ADA2E29207D2A010020836A /* HomeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
+		0ADA2E2A207D2A010020836A /* HomeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
+		121986E6431CE00B8DE79FFB /* Pods-gdpr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdpr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdpr/Pods-gdpr.debug.xcconfig"; sourceTree = "<group>"; };
+		2223927DBC668379C8F7F486 /* Pods-gdprTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdprTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdprTests/Pods-gdprTests.debug.xcconfig"; sourceTree = "<group>"; };
+		29B72C7348AE8EC9D3D7C6F9 /* Pods-gdpr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdpr.release.xcconfig"; path = "Pods/Target Support Files/Pods-gdpr/Pods-gdpr.release.xcconfig"; sourceTree = "<group>"; };
+		3D28A18541047653EDD552E9 /* Pods-gdprUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdprUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gdprUITests/Pods-gdprUITests.release.xcconfig"; sourceTree = "<group>"; };
+		62DD8AB6E1BF3FFABD20E54B /* Pods-gdprTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdprTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-gdprTests/Pods-gdprTests.release.xcconfig"; sourceTree = "<group>"; };
+		CD0DF46AD3B2C0406D4DA7A8 /* Pods_gdprUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gdprUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AC19AD0A271C9A4C96CEC9 /* Pods-gdprUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gdprUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gdprUITests/Pods-gdprUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDAD4C9D1A75E8E2B4352A75 /* Pods_gdpr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gdpr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AAC1C2B207416B100A40A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F8F4DE3F905E67E83A77EBF /* Pods_gdpr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C43207416B100A40A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94C6E3BA29F7B77E0ED220C7 /* Pods_gdprTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C4E207416B100A40A0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A402BF7761C4421FF4A550 /* Pods_gdprUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AAC1C25207416B100A40A0C = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C30207416B100A40A0C /* gdpr */,
+				0AAC1C49207416B100A40A0C /* gdprTests */,
+				0AAC1C54207416B100A40A0C /* gdprUITests */,
+				0AAC1C2F207416B100A40A0C /* Products */,
+				CCB76A5D7A602FA38389B392 /* Pods */,
+				151FA37C0D64318472AF8CD0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0AAC1C2F207416B100A40A0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C2E207416B100A40A0C /* gdpr.app */,
+				0AAC1C46207416B100A40A0C /* gdprTests.xctest */,
+				0AAC1C51207416B100A40A0C /* gdprUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AAC1C30207416B100A40A0C /* gdpr */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C31207416B100A40A0C /* AppDelegate.h */,
+				0AAC1C32207416B100A40A0C /* AppDelegate.m */,
+				0A38E91A207BC507003D3E7E /* AuthenticationService.h */,
+				0A38E918207BC4F0003D3E7E /* AuthenticationService.m */,
+				0ADA2E28207D29B40020836A /* Model */,
+				0ADA2E27207D29A20020836A /* Controller */,
+				0AAC1C37207416B100A40A0C /* Main.storyboard */,
+				0AAC1C3A207416B100A40A0C /* Assets.xcassets */,
+				0AAC1C3C207416B100A40A0C /* LaunchScreen.storyboard */,
+				0AAC1C3F207416B100A40A0C /* Info.plist */,
+				0AAC1C40207416B100A40A0C /* main.m */,
+			);
+			path = gdpr;
+			sourceTree = "<group>";
+		};
+		0AAC1C49207416B100A40A0C /* gdprTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C4A207416B100A40A0C /* gdprTests.m */,
+				0AAC1C4C207416B100A40A0C /* Info.plist */,
+			);
+			path = gdprTests;
+			sourceTree = "<group>";
+		};
+		0AAC1C54207416B100A40A0C /* gdprUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C55207416B100A40A0C /* gdprUITests.m */,
+				0AAC1C57207416B100A40A0C /* Info.plist */,
+			);
+			path = gdprUITests;
+			sourceTree = "<group>";
+		};
+		0ADA2E27207D29A20020836A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0AAC1C34207416B100A40A0C /* ViewController.h */,
+				0AAC1C35207416B100A40A0C /* ViewController.m */,
+				0ADA2E29207D2A010020836A /* HomeVC.h */,
+				0ADA2E2A207D2A010020836A /* HomeVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0ADA2E28207D29B40020836A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A69D8BD2077CB4500EA3DD8 /* AuthenticationResult.h */,
+				0A69D8BB2077CB3900EA3DD8 /* AuthenticationResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		151FA37C0D64318472AF8CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDAD4C9D1A75E8E2B4352A75 /* Pods_gdpr.framework */,
+				054901B397136DCD428299F4 /* Pods_gdprTests.framework */,
+				CD0DF46AD3B2C0406D4DA7A8 /* Pods_gdprUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCB76A5D7A602FA38389B392 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				121986E6431CE00B8DE79FFB /* Pods-gdpr.debug.xcconfig */,
+				29B72C7348AE8EC9D3D7C6F9 /* Pods-gdpr.release.xcconfig */,
+				2223927DBC668379C8F7F486 /* Pods-gdprTests.debug.xcconfig */,
+				62DD8AB6E1BF3FFABD20E54B /* Pods-gdprTests.release.xcconfig */,
+				D0AC19AD0A271C9A4C96CEC9 /* Pods-gdprUITests.debug.xcconfig */,
+				3D28A18541047653EDD552E9 /* Pods-gdprUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AAC1C2D207416B100A40A0C /* gdpr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAC1C5A207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdpr" */;
+			buildPhases = (
+				2B09A0B4A52565F7747C06F3 /* [CP] Check Pods Manifest.lock */,
+				0AAC1C2A207416B100A40A0C /* Sources */,
+				0AAC1C2B207416B100A40A0C /* Frameworks */,
+				0AAC1C2C207416B100A40A0C /* Resources */,
+				4981A8C249584B9197B05271 /* [CP] Embed Pods Frameworks */,
+				4F265410EC891E021D5649AF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gdpr;
+			productName = gdpr;
+			productReference = 0AAC1C2E207416B100A40A0C /* gdpr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AAC1C45207416B100A40A0C /* gdprTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAC1C5D207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdprTests" */;
+			buildPhases = (
+				5340190517D3391C31508FA9 /* [CP] Check Pods Manifest.lock */,
+				0AAC1C42207416B100A40A0C /* Sources */,
+				0AAC1C43207416B100A40A0C /* Frameworks */,
+				0AAC1C44207416B100A40A0C /* Resources */,
+				3F108A23E1D8636905E1524D /* [CP] Embed Pods Frameworks */,
+				DF06B0B684144965AD6DB7B1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAC1C48207416B100A40A0C /* PBXTargetDependency */,
+			);
+			name = gdprTests;
+			productName = gdprTests;
+			productReference = 0AAC1C46207416B100A40A0C /* gdprTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AAC1C50207416B100A40A0C /* gdprUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AAC1C60207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdprUITests" */;
+			buildPhases = (
+				8E049316C12BC9988DF87623 /* [CP] Check Pods Manifest.lock */,
+				0AAC1C4D207416B100A40A0C /* Sources */,
+				0AAC1C4E207416B100A40A0C /* Frameworks */,
+				0AAC1C4F207416B100A40A0C /* Resources */,
+				D2BA1B07691822985CFD3F9B /* [CP] Embed Pods Frameworks */,
+				E35EF38E6CA680EF717C5294 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AAC1C53207416B100A40A0C /* PBXTargetDependency */,
+			);
+			name = gdprUITests;
+			productName = gdprUITests;
+			productReference = 0AAC1C51207416B100A40A0C /* gdprUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AAC1C26207416B100A40A0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = localytics;
+				TargetAttributes = {
+					0AAC1C2D207416B100A40A0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					0AAC1C45207416B100A40A0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0AAC1C2D207416B100A40A0C;
+					};
+					0AAC1C50207416B100A40A0C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0AAC1C2D207416B100A40A0C;
+					};
+				};
+			};
+			buildConfigurationList = 0AAC1C29207416B100A40A0C /* Build configuration list for PBXProject "gdpr" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AAC1C25207416B100A40A0C;
+			productRefGroup = 0AAC1C2F207416B100A40A0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AAC1C2D207416B100A40A0C /* gdpr */,
+				0AAC1C45207416B100A40A0C /* gdprTests */,
+				0AAC1C50207416B100A40A0C /* gdprUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AAC1C2C207416B100A40A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAC1C3E207416B100A40A0C /* LaunchScreen.storyboard in Resources */,
+				0AAC1C3B207416B100A40A0C /* Assets.xcassets in Resources */,
+				0AAC1C39207416B100A40A0C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C44207416B100A40A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C4F207416B100A40A0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B09A0B4A52565F7747C06F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gdpr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F108A23E1D8636905E1524D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdprTests/Pods-gdprTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4981A8C249584B9197B05271 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gdpr/Pods-gdpr-frameworks.sh",
+				"${PODS_ROOT}/Localytics/Localytics-iOS-5.1.0/Localytics.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localytics.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdpr/Pods-gdpr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F265410EC891E021D5649AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdpr/Pods-gdpr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5340190517D3391C31508FA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gdprTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E049316C12BC9988DF87623 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gdprUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BA1B07691822985CFD3F9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdprUITests/Pods-gdprUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF06B0B684144965AD6DB7B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdprTests/Pods-gdprTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E35EF38E6CA680EF717C5294 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gdprUITests/Pods-gdprUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AAC1C2A207416B100A40A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A69D8BC2077CB3900EA3DD8 /* AuthenticationResult.m in Sources */,
+				0AAC1C36207416B100A40A0C /* ViewController.m in Sources */,
+				0AAC1C41207416B100A40A0C /* main.m in Sources */,
+				0ADA2E2B207D2A010020836A /* HomeVC.m in Sources */,
+				0AAC1C33207416B100A40A0C /* AppDelegate.m in Sources */,
+				0A38E919207BC4F0003D3E7E /* AuthenticationService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C42207416B100A40A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAC1C4B207416B100A40A0C /* gdprTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AAC1C4D207416B100A40A0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AAC1C56207416B100A40A0C /* gdprUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AAC1C48207416B100A40A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAC1C2D207416B100A40A0C /* gdpr */;
+			targetProxy = 0AAC1C47207416B100A40A0C /* PBXContainerItemProxy */;
+		};
+		0AAC1C53207416B100A40A0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AAC1C2D207416B100A40A0C /* gdpr */;
+			targetProxy = 0AAC1C52207416B100A40A0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AAC1C37207416B100A40A0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AAC1C38207416B100A40A0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AAC1C3C207416B100A40A0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AAC1C3D207416B100A40A0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AAC1C58207416B100A40A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0AAC1C59207416B100A40A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0AAC1C5B207416B100A40A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121986E6431CE00B8DE79FFB /* Pods-gdpr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdpr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdpr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AAC1C5C207416B100A40A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29B72C7348AE8EC9D3D7C6F9 /* Pods-gdpr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdpr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdpr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AAC1C5E207416B100A40A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2223927DBC668379C8F7F486 /* Pods-gdprTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdprTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdprTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gdpr.app/gdpr";
+			};
+			name = Debug;
+		};
+		0AAC1C5F207416B100A40A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62DD8AB6E1BF3FFABD20E54B /* Pods-gdprTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdprTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdprTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gdpr.app/gdpr";
+			};
+			name = Release;
+		};
+		0AAC1C61207416B100A40A0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0AC19AD0A271C9A4C96CEC9 /* Pods-gdprUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdprUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdprUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gdpr;
+			};
+			name = Debug;
+		};
+		0AAC1C62207416B100A40A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D28A18541047653EDD552E9 /* Pods-gdprUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8SL38676J;
+				INFOPLIST_FILE = gdprUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.gdprUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = gdpr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AAC1C29207416B100A40A0C /* Build configuration list for PBXProject "gdpr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAC1C58207416B100A40A0C /* Debug */,
+				0AAC1C59207416B100A40A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAC1C5A207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdpr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAC1C5B207416B100A40A0C /* Debug */,
+				0AAC1C5C207416B100A40A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAC1C5D207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdprTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAC1C5E207416B100A40A0C /* Debug */,
+				0AAC1C5F207416B100A40A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AAC1C60207416B100A40A0C /* Build configuration list for PBXNativeTarget "gdprUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AAC1C61207416B100A40A0C /* Debug */,
+				0AAC1C62207416B100A40A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AAC1C26207416B100A40A0C /* Project object */;
+}
