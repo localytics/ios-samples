@@ -1,0 +1,16 @@
+PODS:
+  - Localytics (6.1.0)
+
+DEPENDENCIES:
+  - Localytics (~> 6.1)
+
+SPEC REPOS:
+  trunk:
+    - Localytics
+
+SPEC CHECKSUMS:
+  Localytics: c58b8c12c9926bfcbabee10f5b9053630adb6be5
+
+PODFILE CHECKSUM: 6cec94ec712bd2b1c3f8e65ef43dea95bc7d4cfb
+
+COCOAPODS: 1.8.4
